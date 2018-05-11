@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_hr_employee_tree" model="ir.ui.view">
+        <field name="name">hr.employee.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <tree string="Employee">
+                <field name="name"/>
+                <field name="employee_uid"/>
+                <field name="email"/>
+                <field name="mobile"/>
+                <field name="department_id"/>
+                <field name="designation_id"/>
+                <field name="reporting_to_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_hr_employee_form" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <form string="Employee">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="employee_uid"/>
+                        <field name="email"/>
+                        <field name="mobile"/>
+                        <field name="doj"/>
+                        <field name="date_of_relieving"/>
+                        <field name="department_id"/>
+                        <field name="designation_id"/>
+                        <field name="reporting_to_id"/>
+                        <field name="employee_category_id"/>
+                        <field name="qualification_ids"/>
+                        <field name="experience_ids"/>
+                        <field name="attachment_ids"/>
+                        <field name="leave_ids"/>
+                        <field name="leave_level_id"/>
+                        <field name="user_id"/>
+
+                        <field name="bank"/>
+                        <field name="account_no"/>
+                        <field name="aadhar_card"/>
+                        <field name="pan_card"/>
+                        <field name="driving_license"/>
+                        <field name="passport"/>
+                        <field name="epf_no"/>
+                        <field name="epf_nominee"/>
+
+                        <field name="age"/>
+                        <field name="blood_group"/>
+                        <field name="marital_status"/>
+                        <field name="gender"/>
+                        <field name="caste"/>
+                        <field name="religion_id"/>
+                        <field name="physically_challenged"/>
+                        <field name="nationality_id"/>
+                        <field name="mother_toungue_id"/>
+                        <field name="language_known_ids"/>
+                        <field name="personnel_mobile"/>
+                        <field name="personnel_email"/>
+                        <field name="contact_address"/>
+                        <field name="is_contact_differ_permanent"/>
+                        <field name="permanent_address"/>
+                        <field name="family_member_ids"/>
+
+                        <field name="is_doctor"/>
+                        <field name="is_nurse"/>
+                        <field name="is_contract"/>
+                        <field name="is_admin_staff"/>
+                        <field name="is_ambulance_driver"/>
+
+                        <field name="partner_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_hr_employee" model="ir.actions.act_window">
+        <field name="name">Employee</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Action Doctor Contact-->
+    <record id="action_hr_employee_doctor" model="ir.actions.act_window">
+        <field name="name">Doctor</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_doctor', '=', True)]</field>
+    </record>
+
+    <!-- Action Nurse Contact-->
+    <record id="action_hr_employee_nurse" model="ir.actions.act_window">
+        <field name="name">Nurse</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_nurse', '=', True)]</field>
+    </record>
+
+    <!-- Action Contract Contact-->
+    <record id="action_hr_employee_contract" model="ir.actions.act_window">
+        <field name="name">Contract</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_contract', '=', True)]</field>
+    </record>
+
+    <!-- Action Admin Staff Contact-->
+    <record id="action_hr_employee_admin_staff" model="ir.actions.act_window">
+        <field name="name">Admin Staff</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_admin_staff', '=', True)]</field>
+    </record>
+
+    <!-- Action Ambulance Driver Contact-->
+    <record id="action_hr_employee_ambulance_driver" model="ir.actions.act_window">
+        <field name="name">Ambulance Driver</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_ambulance_driver', '=', True)]</field>
+    </record>
+
+</odoo>

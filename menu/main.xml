@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_patient" name="Patient" sequence="10"/>
+    <menuitem id="menu_employee" name="Employee" sequence="20"/>
+    <menuitem id="menu_hospital" name="Hospital" sequence="30"/>
+    <menuitem id="menu_laboratory" name="Laboratory" sequence="40"/>
+    <menuitem id="menu_purchase" name="Purchase" sequence="50"/>
+    <menuitem id="menu_product" name="Product" sequence="60"/>
+    <menuitem id="menu_account" name="Account" sequence="70"/>
+
+</odoo>
